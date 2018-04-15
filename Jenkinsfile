@@ -1,6 +1,6 @@
 node {
     // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
-    def server = Artifactory.server localhost
+    def server = Artifactory.server 'localhost'
     // Create an Artifactory Gradle instance.
     def rtGradle = Artifactory.newGradleBuild()
     def buildInfo
