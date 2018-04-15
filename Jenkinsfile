@@ -18,7 +18,7 @@ node {
     }
 
     stage('Gradle build') {
-        buildInfo = rtGradle.run buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
+        buildInfo = rtGradle.run buildFile: 'build.gradle', tasks: 'build'
     }
 
     stage('Publish build info') {
