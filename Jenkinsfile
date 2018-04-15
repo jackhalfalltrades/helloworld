@@ -19,6 +19,8 @@ node {
 
     stage('Gradle build') {
         buildInfo = rtGradle.run buildFile: 'build.gradle', tasks: 'build'
+        rtGradle.run rootDir: "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
+
 
     }
 
