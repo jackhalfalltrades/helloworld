@@ -14,7 +14,7 @@ node {
         rtGradle.tool = "grade-4.6"
         // Set Artifactory repositories for dependencies resolution and artifacts deployment.
         rtGradle.deployer repo:'libs-release-local', server: server
-        rtGradle.resolver repo:'libs-release', server: server
+        rtGradle.resolver repo:'mavenCentral', server: server
     }
 
     stage('Gradle build') {
